@@ -4,6 +4,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
+import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.spring.annotation.SpringView;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Label;
@@ -29,7 +30,9 @@ public class VaadinRootViewImpl extends AbstractMvpView<VaadinRootView.Observer>
     	header.addStyleName("h1");
     		
     	Button showTestmessage = new Button("show notification", event -> presenter.showTestmessage());
-        VerticalLayout mainLayout = new VerticalLayout(header, showTestmessage);
+        VerticalLayout mainLayout = new VerticalLayout(header, showTestmessage, new Label(
+				"This is a <i>root view</i> for the <i>VaadinUI</i>, defined by the annotation <b>@SpringView(ui = { VaadinUI.class })</b>.",
+				ContentMode.HTML));
         mainLayout.setMargin(true);
         mainLayout.setSpacing(true);
         setCompositionRoot(mainLayout);
