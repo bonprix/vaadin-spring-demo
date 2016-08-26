@@ -17,6 +17,7 @@ import de.bonprix.uis.other.views.OtherView;
 import de.bonprix.uis.vaadin.VaadinUI;
 import de.bonprix.uis.vaadin.views.VaadinRootChildView;
 import de.bonprix.uis.vaadin.views.VaadinRootView;
+import de.bonprix.uis.vaadin.views.VaadinRootViewImpl;
 
 @SpringView(isDefault = true)
 public class DefaultView extends VerticalLayout implements View {
@@ -42,8 +43,8 @@ public class DefaultView extends VerticalLayout implements View {
 		addComponent(new Button("Navigate to global", event -> getUI()	.getNavigator()
 																		.navigateTo("global")));
 		if (UI.getCurrent() instanceof VaadinUI) {
-			addComponent(new Button("Navigate to " + VaadinRootView.VIEW_NAME, event -> getUI()	.getNavigator()
-																								.navigateTo(VaadinRootView.VIEW_NAME)));
+			addComponent(new Button("Navigate to " + VaadinRootViewImpl.VIEW_NAME, event -> getUI()	.getNavigator()
+																								.navigateTo(VaadinRootViewImpl.VIEW_NAME)));
 			addComponent(new Button("Navigate to " + VaadinRootChildView.VIEW_NAME, event -> getUI().getNavigator()
 																									.navigateTo(VaadinRootChildView.VIEW_NAME)));
 		} else if (UI.getCurrent() instanceof OtherUI) {
