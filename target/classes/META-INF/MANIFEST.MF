@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: spring-vaadin
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: thacht
+Built-By: dmut
 Implementation-Vendor-Id: de.bonprix
 Build-Jdk: 1.8.0_66
 Implementation-URL: http://projects.spring.io/spring-boot/spring-vaadi

@@ -15,7 +15,7 @@ public class VaadinRootChild2View extends VerticalLayout implements View {
 	private static final long serialVersionUID = 1L;
 	
 	public static final String VIEW_NAME = "Root Child 2";
-	public static final String VIEW_PARENT_NAME = VaadinRootView.VIEW_NAME;
+	public static final String VIEW_PARENT_NAME = VaadinRootViewImpl.VIEW_NAME;
 
     @PostConstruct
     void init() {
